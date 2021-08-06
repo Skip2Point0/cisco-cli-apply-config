@@ -132,7 +132,7 @@ def tellib_write_commands(usr, passw, en_passw, swh, comm):
             for x in comm:
                 x = x.strip()
                 print(x)
-                output = tn.write(x.encode('ascii') + b"\n")
+                tn.write(x.encode('ascii') + b"\n")
             tn.write(b"end\n")
             print("Writing Memory")
             tn.write(b"terminal no length\n")
